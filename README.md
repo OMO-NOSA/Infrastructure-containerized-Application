@@ -44,24 +44,7 @@ To run the code locally (out of docker)
 * Start API with ```FLASK_APP=api.py flask run```
 
 
-### Deploy to AWS Using Terraform
-To deploy this solution to the cloud, two main technologies are required -- Cloud platform(AWS), Terraform
-
-- Terraform -- Terraform would be used to instantiate and manage the infrastructure the application would run on, this means, we get the ability to manage the state and the lifecycle of the infrastructure using terraform workflow
-
-- Cloud Platform -- Any cloud provider is fine for deployment, For AWS, i would leverage the following service
-
-```
-- AWS ECS -- Fargate
-- AWS ECR -- For hosting the container
-- IAM -- Access and Security
-- LB -- Loadbalancing
-- S3 Bucket -- For storing application logs
-```
-
-==> The docker container with the code base has been pre-built and deployed to a public repository for easy pull and deployment.
-
-## ACCESS API ENDPOINTS (LOCALLY)
+### ACCESS API ENDPOINTS (LOCALLY)
 To access the API, you can use PostMan or any other HTTP Client of your choice
 
 * To get all users ```GET``` to http://localhost:5000/factorial?value=5
@@ -72,3 +55,30 @@ To access the API, you can use PostMan or any other HTTP Client of your choice
 ```
 
 * For health checks ```GET``` to http://localhost:5000/
+
+
+
+### Deploy to AWS Using Terraform
+To deploy this solution to the cloud, two main technologies are required -- Cloud platform(AWS), Terraform
+
+- Terraform -- Terraform would be used to instantiate and manage the infrastructure the application would run on, this means, we get the ability to manage the state and the lifecycle of the infrastructure using terraform workflow
+
+- Cloud Platform -- Any cloud provider is fine for deployment, For AWS, I leverage the following service
+
+```
+- AWS ECS -- Fargate
+- Docker -- For hosting the container
+- IAM -- Access and Security
+- LB -- Loadbalancing
+- Security Groups
+- AWS VPCs
+- AWS Cloudwatch
+
+```
+
+==> The docker container with the code base has been pre-built and deployed to a public repository for easy pull and deployment.
+
+
+### Infrastructural Diagram and Reference
+
+![ECS infra](img/infra_diag.png)
