@@ -6,7 +6,7 @@ output "cluster_name" {
     value = aws_ecs_cluster.api.name
     description = "Name of the hello Cluster"
 }
-output "hello_alb_id" {
+output "api_alb_id" {
     value = aws_lb.api_cluster.id
     description = "ID of the hello ALB"
 }

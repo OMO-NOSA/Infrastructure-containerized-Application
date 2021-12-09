@@ -41,7 +41,7 @@ def url_factorial():
             "input": val,
             "output": "error occured",
         }
-        return jsonify(res), 500
+        return jsonify(res), 400
     else:
         logger.info("Succesfully ran the factorial function")
         res = {
