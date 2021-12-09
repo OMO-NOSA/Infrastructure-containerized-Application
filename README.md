@@ -95,4 +95,4 @@ cd infrastructure/application_deployment
 
 ### Infrastructural Diagram and Reference
 
-![ECS infra](img/infra_diag.png)
+![ECS infra](img/infrastructure/infra_diag.png)
