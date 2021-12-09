@@ -1,9 +1,17 @@
+data "aws_vpc" "default" {
+  default = true
+}
+
+data "aws_subnet_ids" "default" {
+  vpc_id = data.aws_vpc.default.id
+}
+
 resource "aws_lb" "api_cluster" {
   name               = "${var.lb_name}-${random_string.uid.result}"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.alb.id]
-  subnets            = tolist(data.aws_subnet_ids.defaults)
+  subnets            = tolist(data.aws_subnet_ids.default.ids)
 
   enable_deletion_protection = false
 
@@ -12,14 +20,13 @@ resource "aws_lb" "api_cluster" {
   }
 }
 
-# data "aws_region" "current" {}
-# data "aws_caller_identity" "current" {}
+
 
 resource "aws_lb_target_group" "api" {
   name                 = "${var.lb_name}-${random_string.uid.result}"
   port                 = var.service_port
   protocol             = "HTTP"
-  vpc_id               = data.aws_vpc.default
+  vpc_id               = var.vpc_id
   target_type          = "ip"
 
   tags = {

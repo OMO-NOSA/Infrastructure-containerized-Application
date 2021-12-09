@@ -9,6 +9,15 @@ variable "application_count" {
   default     = 2
   }
 
+variable "vpc_id" {
+  type        = string
+  description = "VPC ID in which to deploy ECS Instances"
+}
+
+variable "subnet_ids" {
+  type        = list(string)
+  description = "network subnet ids"
+}
 
 variable "project_name" {
     type        = string

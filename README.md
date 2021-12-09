@@ -76,6 +76,20 @@ To deploy this solution to the cloud, two main technologies are required -- Clou
 
 ```
 
+### Terraform Structure
+The IaC code is modularized, meaning, it is built into reusable modules called child module, the child module is located at:
+
+```
+cd infrastructure
+```
+
+Also built with the child module, is a deployable module called the root module. The root module installs and uses resources defined in the child module for deployment. The root module and instructions on deployments can be found here:
+
+```
+cd infrastructure/application_deployment
+```
+- A README with instructions on how to deploy the infrastructure is placed at in the folder.
+
 ==> The docker container with the code base has been pre-built and deployed to a public repository for easy pull and deployment.
 
 

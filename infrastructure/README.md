@@ -15,6 +15,10 @@ The full documentation about ECS can be found [here](https://aws.amazon.com/ecs/
 
 ## Variables:
 
+### Required Variables
+
+- vpc_id
+- subnet_ids
 
 ### Optional Variables
 
@@ -30,26 +34,4 @@ The full documentation about ECS can be found [here](https://aws.amazon.com/ecs/
 - service_name
 
 
-## Usage
 
-Install Terraform Dependencies
-
-```
-terraform init
-```
-
-See Infrastructure Plan.
-
-```bash
-terraform plan
-```
-
-Apply Planned Infrastructure
-```bash
-terraform apply
-```
-
-Destroy the infrastructure
-```
-terraform destroy
-```
