@@ -99,7 +99,7 @@ variable "service_name" {
 variable "service_port" {
   type        = number
   description = "Port of running container"
-  default     = 8080
+  default     = 5000
 }
 variable "scaling_adjustment" {
   type        = number
@@ -124,5 +124,5 @@ variable "ecs_launch_type" {
 variable "service_image_url" {
   type        = string
   description = "Url to the container image(Dockerhub/ECR)"
-  default     = "docker.io/omojaphet/hello-api:latest" #Change this to the docker repo for container.
+  default     = "docker.io/omojaphet/container-app:latest"
 }
