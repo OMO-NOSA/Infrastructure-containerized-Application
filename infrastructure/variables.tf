@@ -108,8 +108,9 @@ variable "service_name" {
 variable "service_port" {
   type        = number
   description = "Port of running container"
-  default     = 5000
+  default     = 80
 }
+
 variable "scaling_adjustment" {
   type        = number
   description = "Scaling adjustment for autoscaling group"
