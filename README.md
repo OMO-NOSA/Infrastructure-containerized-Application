@@ -47,7 +47,7 @@ To run the code locally (out of docker)
 ### ACCESS API ENDPOINTS (LOCALLY)
 To access the API, you can use PostMan or any other HTTP Client of your choice
 
-* To get all users ```GET``` to http://localhost:5000/factorial?value=5
+* To get ```GET``` to http://localhost:5000/factorial?value=5
 
 ```
 {"function":"factorial","input":"5","output":120}
@@ -95,4 +95,4 @@ cd infrastructure/application_deployment
 
 ### Infrastructural Diagram and Reference
 
-![ECS infra](img/infrastructure/infra_diag.png)
+![ECS infra](infrastructure/img/infra_diag.png)
