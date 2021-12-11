@@ -35,7 +35,7 @@ docker build --tag container-app .
 - Running the docker container
 
 ```
-docker run -d --name factorial_app -p 5000:5000 container-app
+docker run -d --name factorial_app -p 80:80 container-app
 ```
 
 ### Running locally
